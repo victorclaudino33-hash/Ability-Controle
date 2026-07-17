@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Paleta Ability Health Control */
+  --color-white: #ffffff;
+  --color-gray-light: #f5f5f5;
+  --color-gray-dark: #2d3748;
+  --color-ability-red: #d71920;
+  --color-ability-red-dark: #b31217;
+  --color-ability-red-light: #fdecec;
+
+  /* Escala de cinza de apoio (derivada do cinza escuro) */
+  --color-slate-50: #f7f8fa;
+  --color-slate-100: #f5f5f5;
+  --color-slate-200: #e7e9ed;
+  --color-slate-300: #d3d7de;
+  --color-slate-400: #9aa3b2;
+  --color-slate-500: #6b7484;
+  --color-slate-600: #4a5262;
+  --color-slate-700: #363e4d;
+  --color-slate-800: #2d3748;
+  --color-slate-900: #1a202c;
+
+  /* Status */
+  --color-success: #1a8a4a;
+  --color-success-light: #e8f6ee;
+  --color-warning: #b8790a;
+  --color-warning-light: #fdf3e2;
+  --color-danger: #d71920;
+  --color-danger-light: #fdecec;
+  --color-info: #2563a8;
+  --color-info-light: #e8f1fb;
+
+  --font-display: "Manrope", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-slate-200);
+  }
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    background-color: var(--color-slate-50);
+    color: var(--color-slate-800);
+    font-family: var(--font-sans);
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-ability-red);
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: var(--color-slate-300);
+    border-radius: 999px;
+  }
+}
